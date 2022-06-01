@@ -20,7 +20,7 @@ parameters:
   gidRangeStart: "1000"
   gidRangeEnd: "2000"
   basePath: "/dynamic_provisioning"
-  subPathPattern: "${.PVC.namespace}/${PVC.name}"
+  subPathPattern: "${.PVC.namespace}/${.PVC.name}"
   ensureUniqueDirectories: true
 ```
 * provisioningMode - The type of volume to be provisioned by efs. Currently, only access point based provisioning is supported `efs-ap`.
